@@ -1,0 +1,384 @@
+
+........................................................................
+Target: At Risk
+........................................................................
+oxygen_saturation = 95
+   Support:  the target has value: 'At Risk' for 100.000% of the 69 rows matching the rule
+   Coverage: the rule matches: 69 out of 398 rows for target value: 'At Risk'. This is:
+      17.337% of total rows for target value: 'At Risk'
+      2.300% of total rows in data
+age_days = Low AND jaundice_level_mg_dl = High AND oxygen_saturation = 99 AND feeding_type = Formula AND weight_kg = Low
+   Support:  The target has value: 'At Risk' for 83.333% of the 10 remaining rows matching the rule
+   Coverage: The rule matches: 10 out of 329 rows remaining for target value: 'At Risk'. This is:
+      3.040% of remaining rows for target value: 'At Risk'
+      2.513% of total rows for target value: 'At Risk'
+      0.333% of total rows in data
+
+........................................................................
+Target: Healthy
+........................................................................
+age_days = High AND oxygen_saturation = 99 AND reflexes_normal = Yes
+   Support:  the target has value: 'Healthy' for 100.000% of the 87 rows matching the rule
+   Coverage: the rule matches: 87 out of 2602 rows for target value: 'Healthy'. This is:
+      3.344% of total rows for target value: 'Healthy'
+      2.900% of total rows in data
+immunizations_done = Yes AND oxygen_saturation = 97
+   Support:  The target has value: 'Healthy' for 100.000% of the 75 remaining rows matching the rule
+   Coverage: The rule matches: 75 out of 2515 rows remaining for target value: 'Healthy'. This is:
+      2.982% of remaining rows for target value: 'Healthy'
+      2.882% of total rows for target value: 'Healthy'
+      2.500% of total rows in data
+age_days = High AND urine_output_count = 6 AND oxygen_saturation = 98
+   Support:  The target has value: 'Healthy' for 100.000% of the 66 remaining rows matching the rule
+   Coverage: The rule matches: 66 out of 2440 rows remaining for target value: 'Healthy'. This is:
+      2.705% of remaining rows for target value: 'Healthy'
+      2.537% of total rows for target value: 'Healthy'
+      2.200% of total rows in data
+age_days = Med AND oxygen_saturation = 99 AND gender = Male
+   Support:  The target has value: 'Healthy' for 100.000% of the 81 remaining rows matching the rule
+   Coverage: The rule matches: 81 out of 2374 rows remaining for target value: 'Healthy'. This is:
+      3.412% of remaining rows for target value: 'Healthy'
+      3.113% of total rows for target value: 'Healthy'
+      2.700% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 99
+   Support:  The target has value: 'Healthy' for 100.000% of the 79 remaining rows matching the rule
+   Coverage: The rule matches: 79 out of 2293 rows remaining for target value: 'Healthy'. This is:
+      3.445% of remaining rows for target value: 'Healthy'
+      3.036% of total rows for target value: 'Healthy'
+      2.633% of total rows in data
+age_days = High AND oxygen_saturation = 96 AND gender = Female
+   Support:  The target has value: 'Healthy' for 100.000% of the 65 remaining rows matching the rule
+   Coverage: The rule matches: 65 out of 2214 rows remaining for target value: 'Healthy'. This is:
+      2.936% of remaining rows for target value: 'Healthy'
+      2.498% of total rows for target value: 'Healthy'
+      2.167% of total rows in data
+age_days = Med AND stool_count = 0 AND oxygen_saturation = 97
+   Support:  The target has value: 'Healthy' for 100.000% of the 61 remaining rows matching the rule
+   Coverage: The rule matches: 61 out of 2149 rows remaining for target value: 'Healthy'. This is:
+      2.839% of remaining rows for target value: 'Healthy'
+      2.344% of total rows for target value: 'Healthy'
+      2.033% of total rows in data
+age_days = High AND oxygen_saturation = 98 AND length_cm = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 115 remaining rows matching the rule
+   Coverage: The rule matches: 115 out of 2088 rows remaining for target value: 'Healthy'. This is:
+      5.508% of remaining rows for target value: 'Healthy'
+      4.420% of total rows for target value: 'Healthy'
+      3.833% of total rows in data
+age_days = Med AND oxygen_saturation = 96 AND respiratory_rate_bpm = Med
+   Support:  The target has value: 'Healthy' for 100.000% of the 54 remaining rows matching the rule
+   Coverage: The rule matches: 54 out of 1973 rows remaining for target value: 'Healthy'. This is:
+      2.737% of remaining rows for target value: 'Healthy'
+      2.075% of total rows for target value: 'Healthy'
+      1.800% of total rows in data
+oxygen_saturation = 100 AND gestational_age_weeks = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 25 remaining rows matching the rule
+   Coverage: The rule matches: 25 out of 1919 rows remaining for target value: 'Healthy'. This is:
+      1.303% of remaining rows for target value: 'Healthy'
+      0.961% of total rows for target value: 'Healthy'
+      0.833% of total rows in data
+age_days = Med AND weight_kg = High AND jaundice_level_mg_dl = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 54 remaining rows matching the rule
+   Coverage: The rule matches: 54 out of 1894 rows remaining for target value: 'Healthy'. This is:
+      2.851% of remaining rows for target value: 'Healthy'
+      2.075% of total rows for target value: 'Healthy'
+      1.800% of total rows in data
+jaundice_level_mg_dl = Med AND oxygen_saturation = 100
+   Support:  The target has value: 'Healthy' for 100.000% of the 14 remaining rows matching the rule
+   Coverage: The rule matches: 14 out of 1840 rows remaining for target value: 'Healthy'. This is:
+      0.761% of remaining rows for target value: 'Healthy'
+      0.538% of total rows for target value: 'Healthy'
+      0.467% of total rows in data
+jaundice_level_mg_dl = Med AND oxygen_saturation = 97 AND heart_rate_bpm = Med
+   Support:  The target has value: 'Healthy' for 100.000% of the 95 remaining rows matching the rule
+   Coverage: The rule matches: 95 out of 1826 rows remaining for target value: 'Healthy'. This is:
+      5.203% of remaining rows for target value: 'Healthy'
+      3.651% of total rows for target value: 'Healthy'
+      3.167% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 96 AND birth_weight_kg = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 44 remaining rows matching the rule
+   Coverage: The rule matches: 44 out of 1731 rows remaining for target value: 'Healthy'. This is:
+      2.542% of remaining rows for target value: 'Healthy'
+      1.691% of total rows for target value: 'Healthy'
+      1.467% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 98 AND heart_rate_bpm = Low
+   Support:  The target has value: 'Healthy' for 100.000% of the 102 remaining rows matching the rule
+   Coverage: The rule matches: 102 out of 1687 rows remaining for target value: 'Healthy'. This is:
+      6.046% of remaining rows for target value: 'Healthy'
+      3.920% of total rows for target value: 'Healthy'
+      3.400% of total rows in data
+jaundice_level_mg_dl = Med AND heart_rate_bpm = Low AND oxygen_saturation = 98
+   Support:  The target has value: 'Healthy' for 100.000% of the 113 remaining rows matching the rule
+   Coverage: The rule matches: 113 out of 1585 rows remaining for target value: 'Healthy'. This is:
+      7.129% of remaining rows for target value: 'Healthy'
+      4.343% of total rows for target value: 'Healthy'
+      3.767% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 96 AND birth_weight_kg = Low
+   Support:  The target has value: 'Healthy' for 100.000% of the 33 remaining rows matching the rule
+   Coverage: The rule matches: 33 out of 1472 rows remaining for target value: 'Healthy'. This is:
+      2.242% of remaining rows for target value: 'Healthy'
+      1.268% of total rows for target value: 'Healthy'
+      1.100% of total rows in data
+age_days = High AND oxygen_saturation = 97 AND heart_rate_bpm = Low
+   Support:  The target has value: 'Healthy' for 100.000% of the 118 remaining rows matching the rule
+   Coverage: The rule matches: 118 out of 1439 rows remaining for target value: 'Healthy'. This is:
+      8.200% of remaining rows for target value: 'Healthy'
+      4.535% of total rows for target value: 'Healthy'
+      3.933% of total rows in data
+age_days = Med AND heart_rate_bpm = Med AND oxygen_saturation = 98
+   Support:  The target has value: 'Healthy' for 100.000% of the 97 remaining rows matching the rule
+   Coverage: The rule matches: 97 out of 1321 rows remaining for target value: 'Healthy'. This is:
+      7.343% of remaining rows for target value: 'Healthy'
+      3.728% of total rows for target value: 'Healthy'
+      3.233% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 97 AND heart_rate_bpm = Med
+   Support:  The target has value: 'Healthy' for 100.000% of the 86 remaining rows matching the rule
+   Coverage: The rule matches: 86 out of 1224 rows remaining for target value: 'Healthy'. This is:
+      7.026% of remaining rows for target value: 'Healthy'
+      3.305% of total rows for target value: 'Healthy'
+      2.867% of total rows in data
+jaundice_level_mg_dl = Med AND oxygen_saturation = 97 AND heart_rate_bpm = Low
+   Support:  The target has value: 'Healthy' for 100.000% of the 49 remaining rows matching the rule
+   Coverage: The rule matches: 49 out of 1138 rows remaining for target value: 'Healthy'. This is:
+      4.306% of remaining rows for target value: 'Healthy'
+      1.883% of total rows for target value: 'Healthy'
+      1.633% of total rows in data
+age_days = Med AND oxygen_saturation = 97 AND head_circumference_cm = Low
+   Support:  The target has value: 'Healthy' for 100.000% of the 60 remaining rows matching the rule
+   Coverage: The rule matches: 60 out of 1089 rows remaining for target value: 'Healthy'. This is:
+      5.510% of remaining rows for target value: 'Healthy'
+      2.306% of total rows for target value: 'Healthy'
+      2.000% of total rows in data
+age_days = High AND oxygen_saturation = 96 AND respiratory_rate_bpm = Low
+   Support:  The target has value: 'Healthy' for 100.000% of the 21 remaining rows matching the rule
+   Coverage: The rule matches: 21 out of 1029 rows remaining for target value: 'Healthy'. This is:
+      2.041% of remaining rows for target value: 'Healthy'
+      0.807% of total rows for target value: 'Healthy'
+      0.700% of total rows in data
+age_days = High AND oxygen_saturation = 98 AND heart_rate_bpm = Med
+   Support:  The target has value: 'Healthy' for 100.000% of the 45 remaining rows matching the rule
+   Coverage: The rule matches: 45 out of 1008 rows remaining for target value: 'Healthy'. This is:
+      4.464% of remaining rows for target value: 'Healthy'
+      1.729% of total rows for target value: 'Healthy'
+      1.500% of total rows in data
+age_days = Med AND oxygen_saturation = 96 AND heart_rate_bpm = Med
+   Support:  The target has value: 'Healthy' for 100.000% of the 18 remaining rows matching the rule
+   Coverage: The rule matches: 18 out of 963 rows remaining for target value: 'Healthy'. This is:
+      1.869% of remaining rows for target value: 'Healthy'
+      0.692% of total rows for target value: 'Healthy'
+      0.600% of total rows in data
+jaundice_level_mg_dl = Med AND oxygen_saturation = 99 AND reflexes_normal = Yes
+   Support:  The target has value: 'Healthy' for 100.000% of the 34 remaining rows matching the rule
+   Coverage: The rule matches: 34 out of 945 rows remaining for target value: 'Healthy'. This is:
+      3.598% of remaining rows for target value: 'Healthy'
+      1.307% of total rows for target value: 'Healthy'
+      1.133% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 98 AND feeding_frequency_per_day = 8
+   Support:  The target has value: 'Healthy' for 100.000% of the 20 remaining rows matching the rule
+   Coverage: The rule matches: 20 out of 911 rows remaining for target value: 'Healthy'. This is:
+      2.195% of remaining rows for target value: 'Healthy'
+      0.769% of total rows for target value: 'Healthy'
+      0.667% of total rows in data
+age_days = High AND oxygen_saturation = 97 AND reflexes_normal = No
+   Support:  The target has value: 'Healthy' for 100.000% of the 41 remaining rows matching the rule
+   Coverage: The rule matches: 41 out of 891 rows remaining for target value: 'Healthy'. This is:
+      4.602% of remaining rows for target value: 'Healthy'
+      1.576% of total rows for target value: 'Healthy'
+      1.367% of total rows in data
+age_days = Med AND oxygen_saturation = 97 AND length_cm = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 33 remaining rows matching the rule
+   Coverage: The rule matches: 33 out of 850 rows remaining for target value: 'Healthy'. This is:
+      3.882% of remaining rows for target value: 'Healthy'
+      1.268% of total rows for target value: 'Healthy'
+      1.100% of total rows in data
+oxygen_saturation = 100 AND jaundice_level_mg_dl = Low
+   Support:  The target has value: 'Healthy' for 91.667% of the 11 remaining rows matching the rule
+   Coverage: The rule matches: 11 out of 817 rows remaining for target value: 'Healthy'. This is:
+      1.346% of remaining rows for target value: 'Healthy'
+      0.423% of total rows for target value: 'Healthy'
+      0.367% of total rows in data
+immunizations_done = Yes AND heart_rate_bpm = Med
+   Support:  The target has value: 'Healthy' for 100.000% of the 15 remaining rows matching the rule
+   Coverage: The rule matches: 15 out of 806 rows remaining for target value: 'Healthy'. This is:
+      1.861% of remaining rows for target value: 'Healthy'
+      0.576% of total rows for target value: 'Healthy'
+      0.500% of total rows in data
+age_days = Med AND oxygen_saturation = 98 AND heart_rate_bpm = Low
+   Support:  The target has value: 'Healthy' for 100.000% of the 21 remaining rows matching the rule
+   Coverage: The rule matches: 21 out of 791 rows remaining for target value: 'Healthy'. This is:
+      2.655% of remaining rows for target value: 'Healthy'
+      0.807% of total rows for target value: 'Healthy'
+      0.700% of total rows in data
+jaundice_level_mg_dl = Low AND urine_output_count = 6 AND feeding_type = Breastfeeding
+   Support:  The target has value: 'Healthy' for 100.000% of the 16 remaining rows matching the rule
+   Coverage: The rule matches: 16 out of 770 rows remaining for target value: 'Healthy'. This is:
+      2.078% of remaining rows for target value: 'Healthy'
+      0.615% of total rows for target value: 'Healthy'
+      0.533% of total rows in data
+jaundice_level_mg_dl = Med AND oxygen_saturation = 96 AND heart_rate_bpm = Low
+   Support:  The target has value: 'Healthy' for 100.000% of the 20 remaining rows matching the rule
+   Coverage: The rule matches: 20 out of 754 rows remaining for target value: 'Healthy'. This is:
+      2.653% of remaining rows for target value: 'Healthy'
+      0.769% of total rows for target value: 'Healthy'
+      0.667% of total rows in data
+age_days = High AND urine_output_count = 6 AND weight_kg = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 10 remaining rows matching the rule
+   Coverage: The rule matches: 10 out of 734 rows remaining for target value: 'Healthy'. This is:
+      1.362% of remaining rows for target value: 'Healthy'
+      0.384% of total rows for target value: 'Healthy'
+      0.333% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 98 AND urine_output_count = 9
+   Support:  The target has value: 'Healthy' for 100.000% of the 15 remaining rows matching the rule
+   Coverage: The rule matches: 15 out of 724 rows remaining for target value: 'Healthy'. This is:
+      2.072% of remaining rows for target value: 'Healthy'
+      0.576% of total rows for target value: 'Healthy'
+      0.500% of total rows in data
+jaundice_level_mg_dl = Med AND oxygen_saturation = 98 AND feeding_frequency_per_day = 8
+   Support:  The target has value: 'Healthy' for 100.000% of the 17 remaining rows matching the rule
+   Coverage: The rule matches: 17 out of 709 rows remaining for target value: 'Healthy'. This is:
+      2.398% of remaining rows for target value: 'Healthy'
+      0.653% of total rows for target value: 'Healthy'
+      0.567% of total rows in data
+age_days = High AND oxygen_saturation = 96 AND respiratory_rate_bpm = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 11 remaining rows matching the rule
+   Coverage: The rule matches: 11 out of 692 rows remaining for target value: 'Healthy'. This is:
+      1.590% of remaining rows for target value: 'Healthy'
+      0.423% of total rows for target value: 'Healthy'
+      0.367% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 97 AND feeding_frequency_per_day = 11
+   Support:  The target has value: 'Healthy' for 100.000% of the 13 remaining rows matching the rule
+   Coverage: The rule matches: 13 out of 681 rows remaining for target value: 'Healthy'. This is:
+      1.909% of remaining rows for target value: 'Healthy'
+      0.500% of total rows for target value: 'Healthy'
+      0.433% of total rows in data
+age_days = High AND oxygen_saturation = 97 AND birth_weight_kg = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 19 remaining rows matching the rule
+   Coverage: The rule matches: 19 out of 668 rows remaining for target value: 'Healthy'. This is:
+      2.844% of remaining rows for target value: 'Healthy'
+      0.730% of total rows for target value: 'Healthy'
+      0.633% of total rows in data
+jaundice_level_mg_dl = Med AND feeding_frequency_per_day = 10 AND head_circumference_cm = Med
+   Support:  The target has value: 'Healthy' for 100.000% of the 15 remaining rows matching the rule
+   Coverage: The rule matches: 15 out of 649 rows remaining for target value: 'Healthy'. This is:
+      2.311% of remaining rows for target value: 'Healthy'
+      0.576% of total rows for target value: 'Healthy'
+      0.500% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 96 AND immunizations_done = No
+   Support:  The target has value: 'Healthy' for 92.857% of the 13 remaining rows matching the rule
+   Coverage: The rule matches: 13 out of 634 rows remaining for target value: 'Healthy'. This is:
+      2.050% of remaining rows for target value: 'Healthy'
+      0.500% of total rows for target value: 'Healthy'
+      0.433% of total rows in data
+jaundice_level_mg_dl = Low AND oxygen_saturation = 98 AND feeding_frequency_per_day = 9
+   Support:  The target has value: 'Healthy' for 100.000% of the 10 remaining rows matching the rule
+   Coverage: The rule matches: 10 out of 621 rows remaining for target value: 'Healthy'. This is:
+      1.610% of remaining rows for target value: 'Healthy'
+      0.384% of total rows for target value: 'Healthy'
+      0.333% of total rows in data
+age_days = Med AND oxygen_saturation = 97 AND urine_output_count = 7
+   Support:  The target has value: 'Healthy' for 100.000% of the 11 remaining rows matching the rule
+   Coverage: The rule matches: 11 out of 611 rows remaining for target value: 'Healthy'. This is:
+      1.800% of remaining rows for target value: 'Healthy'
+      0.423% of total rows for target value: 'Healthy'
+      0.367% of total rows in data
+jaundice_level_mg_dl = Med AND oxygen_saturation = 98 AND age_days = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 11 remaining rows matching the rule
+   Coverage: The rule matches: 11 out of 600 rows remaining for target value: 'Healthy'. This is:
+      1.833% of remaining rows for target value: 'Healthy'
+      0.423% of total rows for target value: 'Healthy'
+      0.367% of total rows in data
+age_days = Med AND oxygen_saturation = 98 AND respiratory_rate_bpm = High
+   Support:  The target has value: 'Healthy' for 100.000% of the 12 remaining rows matching the rule
+   Coverage: The rule matches: 12 out of 589 rows remaining for target value: 'Healthy'. This is:
+      2.037% of remaining rows for target value: 'Healthy'
+      0.461% of total rows for target value: 'Healthy'
+      0.400% of total rows in data
+oxygen_saturation = 97 AND jaundice_level_mg_dl = Low AND heart_rate_bpm = Low AND gender = Male
+   Support:  The target has value: 'Healthy' for 100.000% of the 22 remaining rows matching the rule
+   Coverage: The rule matches: 22 out of 577 rows remaining for target value: 'Healthy'. This is:
+      3.813% of remaining rows for target value: 'Healthy'
+      0.846% of total rows for target value: 'Healthy'
+      0.733% of total rows in data
+jaundice_level_mg_dl = Med AND age_days = Low AND head_circumference_cm = Low AND reflexes_normal = Yes
+   Support:  The target has value: 'Healthy' for 100.000% of the 19 remaining rows matching the rule
+   Coverage: The rule matches: 19 out of 555 rows remaining for target value: 'Healthy'. This is:
+      3.423% of remaining rows for target value: 'Healthy'
+      0.730% of total rows for target value: 'Healthy'
+      0.633% of total rows in data
+age_days = High AND oxygen_saturation = 97 AND jaundice_level_mg_dl = High AND birth_weight_kg = Low
+   Support:  The target has value: 'Healthy' for 100.000% of the 15 remaining rows matching the rule
+   Coverage: The rule matches: 15 out of 536 rows remaining for target value: 'Healthy'. This is:
+      2.799% of remaining rows for target value: 'Healthy'
+      0.576% of total rows for target value: 'Healthy'
+      0.500% of total rows in data
+age_days = Med AND oxygen_saturation = 98 AND feeding_frequency_per_day = 12
+   Support:  The target has value: 'Healthy' for 93.333% of the 14 remaining rows matching the rule
+   Coverage: The rule matches: 14 out of 521 rows remaining for target value: 'Healthy'. This is:
+      2.687% of remaining rows for target value: 'Healthy'
+      0.538% of total rows for target value: 'Healthy'
+      0.467% of total rows in data
+stool_count = 5 AND oxygen_saturation = 96 AND immunizations_done = No
+   Support:  The target has value: 'Healthy' for 84.615% of the 11 remaining rows matching the rule
+   Coverage: The rule matches: 11 out of 507 rows remaining for target value: 'Healthy'. This is:
+      2.170% of remaining rows for target value: 'Healthy'
+      0.423% of total rows for target value: 'Healthy'
+      0.367% of total rows in data
+oxygen_saturation = 97 AND feeding_frequency_per_day = 7 AND stool_count = 5
+   Support:  The target has value: 'Healthy' for 100.000% of the 17 remaining rows matching the rule
+   Coverage: The rule matches: 17 out of 496 rows remaining for target value: 'Healthy'. This is:
+      3.427% of remaining rows for target value: 'Healthy'
+      0.653% of total rows for target value: 'Healthy'
+      0.567% of total rows in data
+oxygen_saturation = 97 AND jaundice_level_mg_dl = Low AND feeding_frequency_per_day = 8
+   Support:  The target has value: 'Healthy' for 93.333% of the 14 remaining rows matching the rule
+   Coverage: The rule matches: 14 out of 479 rows remaining for target value: 'Healthy'. This is:
+      2.923% of remaining rows for target value: 'Healthy'
+      0.538% of total rows for target value: 'Healthy'
+      0.467% of total rows in data
+feeding_frequency_per_day = 10 AND stool_count = 3
+   Support:  The target has value: 'Healthy' for 78.571% of the 11 remaining rows matching the rule
+   Coverage: The rule matches: 11 out of 465 rows remaining for target value: 'Healthy'. This is:
+      2.366% of remaining rows for target value: 'Healthy'
+      0.423% of total rows for target value: 'Healthy'
+      0.367% of total rows in data
+immunizations_done = Yes AND oxygen_saturation = 98
+   Support:  The target has value: 'Healthy' for 83.333% of the 10 remaining rows matching the rule
+   Coverage: The rule matches: 10 out of 454 rows remaining for target value: 'Healthy'. This is:
+      2.203% of remaining rows for target value: 'Healthy'
+      0.384% of total rows for target value: 'Healthy'
+      0.333% of total rows in data
+oxygen_saturation = 97 AND jaundice_level_mg_dl = Med AND birth_weight_kg = Low AND reflexes_normal = Yes
+   Support:  The target has value: 'Healthy' for 90.909% of the 10 remaining rows matching the rule
+   Coverage: The rule matches: 10 out of 444 rows remaining for target value: 'Healthy'. This is:
+      2.252% of remaining rows for target value: 'Healthy'
+      0.384% of total rows for target value: 'Healthy'
+      0.333% of total rows in data
+oxygen_saturation = 98 AND age_days = High AND birth_weight_kg = Med AND reflexes_normal = Yes
+   Support:  The target has value: 'Healthy' for 100.000% of the 12 remaining rows matching the rule
+   Coverage: The rule matches: 12 out of 434 rows remaining for target value: 'Healthy'. This is:
+      2.765% of remaining rows for target value: 'Healthy'
+      0.461% of total rows for target value: 'Healthy'
+      0.400% of total rows in data
+oxygen_saturation = 97 AND age_days = Med AND gender = Female
+   Support:  The target has value: 'Healthy' for 84.615% of the 11 remaining rows matching the rule
+   Coverage: The rule matches: 11 out of 422 rows remaining for target value: 'Healthy'. This is:
+      2.607% of remaining rows for target value: 'Healthy'
+      0.423% of total rows for target value: 'Healthy'
+      0.367% of total rows in data
+oxygen_saturation = 96 AND feeding_frequency_per_day = 12 AND reflexes_normal = Yes
+   Support:  The target has value: 'Healthy' for 78.571% of the 11 remaining rows matching the rule
+   Coverage: The rule matches: 11 out of 411 rows remaining for target value: 'Healthy'. This is:
+      2.676% of remaining rows for target value: 'Healthy'
+      0.423% of total rows for target value: 'Healthy'
+      0.367% of total rows in data
+oxygen_saturation = 98 AND jaundice_level_mg_dl = Low AND weight_kg = Low AND reflexes_normal = Yes
+   Support:  The target has value: 'Healthy' for 100.000% of the 10 remaining rows matching the rule
+   Coverage: The rule matches: 10 out of 400 rows remaining for target value: 'Healthy'. This is:
+      2.500% of remaining rows for target value: 'Healthy'
+      0.384% of total rows for target value: 'Healthy'
+      0.333% of total rows in data
+oxygen_saturation = 97 AND feeding_frequency_per_day = 7 AND weight_kg = Low
+   Support:  The target has value: 'Healthy' for 83.333% of the 10 remaining rows matching the rule
+   Coverage: The rule matches: 10 out of 390 rows remaining for target value: 'Healthy'. This is:
+      2.564% of remaining rows for target value: 'Healthy'
+      0.384% of total rows for target value: 'Healthy'
+      0.333% of total rows in data
