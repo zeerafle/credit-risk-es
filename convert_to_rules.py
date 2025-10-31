@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.2"
+__generated_with = "0.17.6"
 app = marimo.App(width="medium")
 
 
@@ -44,10 +44,42 @@ def _(df):
 
 @app.cell
 def _(df):
+    df
+    return
+
+
+@app.cell
+def _(df):
+    df.describe()
+    return
+
+
+@app.cell
+def _(df):
     from prism_rules import PrismRules
 
     prism = PrismRules()
     _ = prism.get_prism_rules(df, 'risk_level')
+    return (prism,)
+
+
+@app.cell
+def _(prism):
+    prism.bin_ranges
+    return
+
+
+@app.cell
+def _(prism):
+    import pickle
+
+    with open("infant_wellness_es/rules/prism_object.pkl", 'wb') as f:
+        pickle.dump(prism, f)
+    return
+
+
+@app.cell
+def _():
     return
 
 

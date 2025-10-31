@@ -1,16 +1,21 @@
 [project]
-name = "credit-risk-es"
+name = "infant-wellness-es"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "basedpyright>=1.32.1",
     "kagglehub>=0.3.13",
-    "marimo>=0.17.2",
     "matplotlib>=3.10.7",
     "pandas>=2.3.3",
-    "python-lsp-server>=1.13.1",
+    "reflex>=0.8.17",
     "seaborn>=0.13.2",
+]
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.32.1",
+    "marimo>=0.17.6",
+    "python-lsp-server>=1.13.1",
     "ty>=0.0.1a24",
 ]
