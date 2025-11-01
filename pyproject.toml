@@ -8,6 +8,7 @@ dependencies = [
     "kagglehub>=0.3.13",
     "matplotlib>=3.10.7",
     "pandas>=2.3.3",
+    "pyzmq>=27.1.0",
     "reflex>=0.8.17",
     "seaborn>=0.13.2",
 ]
