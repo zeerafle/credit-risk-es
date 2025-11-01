@@ -32,6 +32,7 @@
 
 (defrule at_risk_oxygen_saturation_95
   "At Risk: oxygen_saturation=95"
+  (declare (salience 100))    ; higher priority
   (case (id ?case-id)
         (oxygen_saturation 95))
   =>
@@ -39,6 +40,7 @@
 
 (defrule at_risk_age_days_low_jaundice_level_mg_dl_high_oxygen_saturation_99_feeding_type_formula_weight_kg_low
   "At Risk: age_days=Low AND jaundice_level_mg_dl=High AND oxygen_saturation=99 AND feeding_type=Formula AND weight_kg=Low"
+  (declare (salience 100))    ; higher priority
   (case (id ?case-id)
         (age_days Low)
         (jaundice_level_mg_dl High)
@@ -57,7 +59,7 @@
   (case (id ?case-id)
         (age_days High)
         (oxygen_saturation 99)
-        (reflexes_normal Yes))
+        (reflexes_normal Yes)(not (conclusion (id ?case-id) (target "At Risk")))      ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_99_reflexes_normal_yes))))
 
@@ -66,6 +68,7 @@
   (case (id ?case-id)
         (immunizations_done Yes)
         (oxygen_saturation 97))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_immunizations_done_yes_oxygen_saturation_97))))
 
@@ -75,6 +78,7 @@
         (age_days High)
         (urine_output_count 6)
         (oxygen_saturation 98))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_urine_output_count_6_oxygen_saturation_98))))
 
@@ -84,6 +88,7 @@
         (age_days Med)
         (oxygen_saturation 99)
         (gender Male))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_oxygen_saturation_99_gender_male))))
 
@@ -92,6 +97,7 @@
   (case (id ?case-id)
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 99))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_99))))
 
@@ -101,6 +107,7 @@
         (age_days High)
         (oxygen_saturation 96)
         (gender Female))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_96_gender_female))))
 
@@ -110,6 +117,7 @@
         (age_days Med)
         (stool_count 0)
         (oxygen_saturation 97))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_stool_count_0_oxygen_saturation_97))))
 
@@ -119,6 +127,7 @@
         (age_days High)
         (oxygen_saturation 98)
         (length_cm High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_98_length_cm_high))))
 
@@ -128,6 +137,7 @@
         (age_days Med)
         (oxygen_saturation 96)
         (respiratory_rate_bpm Med))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_oxygen_saturation_96_respiratory_rate_bpm_med))))
 
@@ -136,6 +146,7 @@
   (case (id ?case-id)
         (oxygen_saturation 100)
         (gestational_age_weeks High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_100_gestational_age_weeks_high))))
 
@@ -145,6 +156,7 @@
         (age_days Med)
         (weight_kg High)
         (jaundice_level_mg_dl High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_weight_kg_high_jaundice_level_mg_dl_high))))
 
@@ -153,6 +165,7 @@
   (case (id ?case-id)
         (jaundice_level_mg_dl Med)
         (oxygen_saturation 100))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_oxygen_saturation_100))))
 
@@ -162,6 +175,7 @@
         (jaundice_level_mg_dl Med)
         (oxygen_saturation 97)
         (heart_rate_bpm Med))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_oxygen_saturation_97_heart_rate_bpm_med))))
 
@@ -171,6 +185,7 @@
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 96)
         (birth_weight_kg High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_96_birth_weight_kg_high))))
 
@@ -180,6 +195,7 @@
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 98)
         (heart_rate_bpm Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_98_heart_rate_bpm_low))))
 
@@ -189,6 +205,7 @@
         (jaundice_level_mg_dl Med)
         (heart_rate_bpm Low)
         (oxygen_saturation 98))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_heart_rate_bpm_low_oxygen_saturation_98))))
 
@@ -198,6 +215,7 @@
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 96)
         (birth_weight_kg Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_96_birth_weight_kg_low))))
 
@@ -207,6 +225,7 @@
         (age_days High)
         (oxygen_saturation 97)
         (heart_rate_bpm Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_97_heart_rate_bpm_low))))
 
@@ -216,6 +235,7 @@
         (age_days Med)
         (heart_rate_bpm Med)
         (oxygen_saturation 98))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_heart_rate_bpm_med_oxygen_saturation_98))))
 
@@ -225,6 +245,7 @@
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 97)
         (heart_rate_bpm Med))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_97_heart_rate_bpm_med))))
 
@@ -234,6 +255,7 @@
         (jaundice_level_mg_dl Med)
         (oxygen_saturation 97)
         (heart_rate_bpm Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_oxygen_saturation_97_heart_rate_bpm_low))))
 
@@ -243,6 +265,7 @@
         (age_days Med)
         (oxygen_saturation 97)
         (head_circumference_cm Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_oxygen_saturation_97_head_circumference_cm_low))))
 
@@ -252,6 +275,7 @@
         (age_days High)
         (oxygen_saturation 96)
         (respiratory_rate_bpm Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_96_respiratory_rate_bpm_low))))
 
@@ -261,6 +285,7 @@
         (age_days High)
         (oxygen_saturation 98)
         (heart_rate_bpm Med))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_98_heart_rate_bpm_med))))
 
@@ -270,6 +295,7 @@
         (age_days Med)
         (oxygen_saturation 96)
         (heart_rate_bpm Med))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_oxygen_saturation_96_heart_rate_bpm_med))))
 
@@ -279,6 +305,7 @@
         (jaundice_level_mg_dl Med)
         (oxygen_saturation 99)
         (reflexes_normal Yes))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_oxygen_saturation_99_reflexes_normal_yes))))
 
@@ -288,6 +315,7 @@
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 98)
         (feeding_frequency_per_day 8))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_98_feeding_frequency_per_day_8))))
 
@@ -297,6 +325,7 @@
         (age_days High)
         (oxygen_saturation 97)
         (reflexes_normal No))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_97_reflexes_normal_no))))
 
@@ -306,6 +335,7 @@
         (age_days Med)
         (oxygen_saturation 97)
         (length_cm High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_oxygen_saturation_97_length_cm_high))))
 
@@ -314,6 +344,7 @@
   (case (id ?case-id)
         (oxygen_saturation 100)
         (jaundice_level_mg_dl Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_100_jaundice_level_mg_dl_low))))
 
@@ -322,6 +353,7 @@
   (case (id ?case-id)
         (immunizations_done Yes)
         (heart_rate_bpm Med))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_immunizations_done_yes_heart_rate_bpm_med))))
 
@@ -331,6 +363,7 @@
         (age_days Med)
         (oxygen_saturation 98)
         (heart_rate_bpm Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_oxygen_saturation_98_heart_rate_bpm_low))))
 
@@ -340,6 +373,7 @@
         (jaundice_level_mg_dl Low)
         (urine_output_count 6)
         (feeding_type Breastfeeding))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_urine_output_count_6_feeding_type_breastfeeding))))
 
@@ -349,6 +383,7 @@
         (jaundice_level_mg_dl Med)
         (oxygen_saturation 96)
         (heart_rate_bpm Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_oxygen_saturation_96_heart_rate_bpm_low))))
 
@@ -358,6 +393,7 @@
         (age_days High)
         (urine_output_count 6)
         (weight_kg High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_urine_output_count_6_weight_kg_high))))
 
@@ -367,6 +403,7 @@
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 98)
         (urine_output_count 9))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_98_urine_output_count_9))))
 
@@ -376,6 +413,7 @@
         (jaundice_level_mg_dl Med)
         (oxygen_saturation 98)
         (feeding_frequency_per_day 8))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_oxygen_saturation_98_feeding_frequency_per_day_8))))
 
@@ -385,6 +423,7 @@
         (age_days High)
         (oxygen_saturation 96)
         (respiratory_rate_bpm High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_96_respiratory_rate_bpm_high))))
 
@@ -394,6 +433,7 @@
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 97)
         (feeding_frequency_per_day 11))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_97_feeding_frequency_per_day_11))))
 
@@ -403,6 +443,7 @@
         (age_days High)
         (oxygen_saturation 97)
         (birth_weight_kg High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_97_birth_weight_kg_high))))
 
@@ -412,6 +453,7 @@
         (jaundice_level_mg_dl Med)
         (feeding_frequency_per_day 10)
         (head_circumference_cm Med))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_feeding_frequency_per_day_10_head_circumference_cm_med))))
 
@@ -421,6 +463,7 @@
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 96)
         (immunizations_done No))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_96_immunizations_done_no))))
 
@@ -430,6 +473,7 @@
         (jaundice_level_mg_dl Low)
         (oxygen_saturation 98)
         (feeding_frequency_per_day 9))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_low_oxygen_saturation_98_feeding_frequency_per_day_9))))
 
@@ -439,6 +483,7 @@
         (age_days Med)
         (oxygen_saturation 97)
         (urine_output_count 7))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_oxygen_saturation_97_urine_output_count_7))))
 
@@ -448,6 +493,7 @@
         (jaundice_level_mg_dl Med)
         (oxygen_saturation 98)
         (age_days High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_oxygen_saturation_98_age_days_high))))
 
@@ -457,6 +503,7 @@
         (age_days Med)
         (oxygen_saturation 98)
         (respiratory_rate_bpm High))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_oxygen_saturation_98_respiratory_rate_bpm_high))))
 
@@ -467,6 +514,7 @@
         (jaundice_level_mg_dl Low)
         (heart_rate_bpm Low)
         (gender Male))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_97_jaundice_level_mg_dl_low_heart_rate_bpm_low_gender_male))))
 
@@ -477,6 +525,7 @@
         (age_days Low)
         (head_circumference_cm Low)
         (reflexes_normal Yes))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_jaundice_level_mg_dl_med_age_days_low_head_circumference_cm_low_reflexes_normal_yes))))
 
@@ -487,6 +536,7 @@
         (oxygen_saturation 97)
         (jaundice_level_mg_dl High)
         (birth_weight_kg Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_high_oxygen_saturation_97_jaundice_level_mg_dl_high_birth_weight_kg_low))))
 
@@ -496,6 +546,7 @@
         (age_days Med)
         (oxygen_saturation 98)
         (feeding_frequency_per_day 12))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_age_days_med_oxygen_saturation_98_feeding_frequency_per_day_12))))
 
@@ -505,6 +556,7 @@
         (stool_count 5)
         (oxygen_saturation 96)
         (immunizations_done No))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_stool_count_5_oxygen_saturation_96_immunizations_done_no))))
 
@@ -514,6 +566,7 @@
         (oxygen_saturation 97)
         (feeding_frequency_per_day 7)
         (stool_count 5))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_97_feeding_frequency_per_day_7_stool_count_5))))
 
@@ -523,6 +576,7 @@
         (oxygen_saturation 97)
         (jaundice_level_mg_dl Low)
         (feeding_frequency_per_day 8))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_97_jaundice_level_mg_dl_low_feeding_frequency_per_day_8))))
 
@@ -531,6 +585,7 @@
   (case (id ?case-id)
         (feeding_frequency_per_day 10)
         (stool_count 3))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_feeding_frequency_per_day_10_stool_count_3))))
 
@@ -539,6 +594,7 @@
   (case (id ?case-id)
         (immunizations_done Yes)
         (oxygen_saturation 98))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_immunizations_done_yes_oxygen_saturation_98))))
 
@@ -549,6 +605,7 @@
         (jaundice_level_mg_dl Med)
         (birth_weight_kg Low)
         (reflexes_normal Yes))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_97_jaundice_level_mg_dl_med_birth_weight_kg_low_reflexes_normal_yes))))
 
@@ -559,6 +616,7 @@
         (age_days High)
         (birth_weight_kg Med)
         (reflexes_normal Yes))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_98_age_days_high_birth_weight_kg_med_reflexes_normal_yes))))
 
@@ -568,6 +626,7 @@
         (oxygen_saturation 97)
         (age_days Med)
         (gender Female))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_97_age_days_med_gender_female))))
 
@@ -577,6 +636,7 @@
         (oxygen_saturation 96)
         (feeding_frequency_per_day 12)
         (reflexes_normal Yes))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_96_feeding_frequency_per_day_12_reflexes_normal_yes))))
 
@@ -587,6 +647,7 @@
         (jaundice_level_mg_dl Low)
         (weight_kg Low)
         (reflexes_normal Yes))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_98_jaundice_level_mg_dl_low_weight_kg_low_reflexes_normal_yes))))
 
@@ -596,5 +657,6 @@
         (oxygen_saturation 97)
         (feeding_frequency_per_day 7)
         (weight_kg Low))
+  (not (conclusion (id ?case-id) (target "At Risk")))     ; Don't fire if at risk exists
   =>
   (assert (conclusion (id ?case-id) (target "Healthy") (rule healthy_oxygen_saturation_97_feeding_frequency_per_day_7_weight_kg_low))))
